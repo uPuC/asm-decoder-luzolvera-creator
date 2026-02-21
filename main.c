@@ -173,7 +173,7 @@ int main()
             int K = (instruction->type4.k4_1 << 4) | instruction->type4.k4;
             printf("LDI R%d,%d\n", Rd, K);
         }
-        // 4. LD
+        // 4. LD Rd, X+
         else if ((instruction->op16 & 0xFE0F) == 0x900D) {
             printf("LD R%d, X+\n", instruction->type1.d5);
         } 
